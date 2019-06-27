@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: jdbc
+      label: dev
+      profile: dev
+      uri: http://127.0.0.1:8500

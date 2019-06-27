@@ -1,0 +1,4 @@
+/Users/apple/work/workspace/spring-cloud/microservices/user-service/src/main/java/com/netease/user/UserServiceMain.java
+/Users/apple/work/workspace/spring-cloud/microservices/user-service/src/main/java/com/netease/user/controller/UserServiceController.java
+/Users/apple/work/workspace/spring-cloud/microservices/user-service/src/main/java/com/netease/user/service/UserService.java
+/Users/apple/work/workspace/spring-cloud/microservices/user-service/src/main/java/com/netease/user/service/fallback/UserServiceFallback.java

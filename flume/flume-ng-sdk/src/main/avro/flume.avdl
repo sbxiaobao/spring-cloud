@@ -1,0 +1,16 @@
+@namespace("org.apache.flume.source.avro")
+
+protocol AvroSourceProtocol{
+    enum Status {
+        OK, FAILED, UNKNOWN
+    }
+
+    record AvroFlumeEvent{
+        map<string> headers;
+        bytes body;
+    }
+
+    Status append(AvroFlumeEvent event);
+
+    Status appendBatch(array<AvroFlumeEvent> events);
+}

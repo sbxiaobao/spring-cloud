@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="10 seconds" debug="false">
+    <property name="PATH_INFO" value="flume"/>
+    <property name="LOG_PATTERN" value="%msg%n"/>
+
+    <appender name="APP_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <file>/tmp/flume.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>/tmp/flume.log.%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <maxFileSize>500MB</maxFileSize>
+            <maxHistory>10</maxHistory>
+            <totalSizeCap>10GB</totalSizeCap>
+            <cleanHistoryOnStart>false</cleanHistoryOnStart>
+        </rollingPolicy>
+    </appender>
+
+    <root level="ERROR">
+        <appender-ref ref="APP_FILE"/>
+    </root>
+
+    <logger name="org.apache.flume.lifecycle" level="debug" additivity="false">
+        <appender-ref ref="APP_FILE"/>
+    </logger>
+    <logger name="log4j.logger.org.jboss" level="warn" additivity="false">
+        <appender-ref ref="APP_FILE"/>
+    </logger>
+    <logger name="log4j.logger.org.mortbay" level="info" additivity="false">
+        <appender-ref ref="APP_FILE"/>
+    </logger>
+    <logger name="log4j.logger.org.apache.avro.ipc.NettyTransceiver" additivity="false" level="INFO">
+        <appender-ref ref="APP_FILE"/>
+    </logger>
+</configuration>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>microservices</artifactId>
+        <groupId>com.netease</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <name>user-service</name>
+    <artifactId>user-service</artifactId>
+
+    <build>
+        <filters>
+            <filter>../../common/src/main/filters/filter-${active.profile}.properties</filter>
+            <filter>src/main/filters/filter-${active.profile}.properties</filter>
+        </filters>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.netease</groupId>
+            <artifactId>cat-client</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.collections</groupId>
+                    <artifactId>google-collections</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>
