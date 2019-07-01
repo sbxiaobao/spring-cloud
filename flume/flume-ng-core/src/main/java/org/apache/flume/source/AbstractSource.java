@@ -25,7 +25,7 @@ public abstract class AbstractSource implements Source {
 
     @Override
     public synchronized void start() {
-//        Preconditions.checkState(channelProcessor != null, "No channel processor configured");
+        Preconditions.checkState(channelProcessor != null, "No channel processor configured");
 
         lifecycleState = LifecycleState.START;
     }

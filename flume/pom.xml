@@ -17,6 +17,7 @@
         <module>flume-ng-node</module>
         <module>flume-jdbc-channel</module>
         <module>flume-ng-sinks</module>
+        <module>flume-ng-sources</module>
     </modules>
 
     <properties>
