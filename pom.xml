@@ -192,6 +192,7 @@
             <id>dev</id>
             <properties>
                 <active.profile>dev</active.profile>
+                <zipkin.enable>true</zipkin.enable>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -201,18 +202,21 @@
             <id>test</id>
             <properties>
                 <active.profile>test</active.profile>
+                <zipkin.enable>true</zipkin.enable>
             </properties>
         </profile>
         <profile>
             <id>staging</id>
             <properties>
                 <active.profile>staging</active.profile>
+                <zipkin.enable>true</zipkin.enable>
             </properties>
         </profile>
         <profile>
             <id>prod</id>
             <properties>
                 <active.profile>prod</active.profile>
+                <zipkin.enable>true</zipkin.enable>
             </properties>
         </profile>
     </profiles>

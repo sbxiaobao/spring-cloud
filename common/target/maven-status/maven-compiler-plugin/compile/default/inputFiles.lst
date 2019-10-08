@@ -1,1 +1,7 @@
+/Users/apple/work/workspace/spring-cloud/common/src/main/java/com/netease/common/codes/ApiCodes.java
 /Users/apple/work/workspace/spring-cloud/common/src/main/java/com/netease/common/entity/mysql/WechatUser.java
+/Users/apple/work/workspace/spring-cloud/common/src/main/java/com/netease/common/cloud/EnableCloud.java
+/Users/apple/work/workspace/spring-cloud/common/src/main/java/com/netease/common/cloud/ResponseBodyWrapHandler.java
+/Users/apple/work/workspace/spring-cloud/common/src/main/java/com/netease/common/cloud/ResponseBodyWrapFactoryBean.java
+/Users/apple/work/workspace/spring-cloud/common/src/main/java/com/netease/common/codes/Codes.java
+/Users/apple/work/workspace/spring-cloud/common/src/main/java/com/netease/common/pojo/ResponseBody.java
